@@ -5,7 +5,7 @@
 
 ## Overview
 
-This is an MCP (Multi-Modal Command Processor) server that executes Manim animation code and returns the generated video. It allows users to send Manim scripts and receive the rendered animation.
+This is an MCP (Model Context Protocol) server that executes Manim animation code and returns the generated video. It allows users to send Manim scripts and receive the rendered animation.
 
 ## Features
 
