@@ -3,10 +3,12 @@ import tempfile
 import os
 import shutil
 from mcp.server.fastmcp import FastMCP
+import sys
 
 mcp = FastMCP()
 
 # Get Manim executable path from environment variables or assume it's in the system PATH
+# Set executable to "python" to use python.
 MANIM_EXECUTABLE = os.getenv("MANIM_EXECUTABLE", "manim")   #MANIM_PATH "/Users/[Your_username]/anaconda3/envs/manim2/Scripts/manim.exe"
 
 TEMP_DIRS = {}
@@ -26,9 +28,15 @@ def execute_manim_code(manim_code: str) -> str:
         with open(script_path, "w") as script_file:
             script_file.write(manim_code)
         
-        # Execute Manim with the correct path
+        # Determine which command to run: either custom executable or python -m manim
+        if MANIM_EXECUTABLE.lower() == "python":
+            command = [sys.executable, "-m", "manim", "-p", script_path]
+        else:
+            command = [MANIM_EXECUTABLE, "-p", script_path]
+        
+        # Execute Manim with the determined command
         result = subprocess.run(
-            [MANIM_EXECUTABLE, "-p", script_path], #MANIM_PATH "/Users/[Your_username]/anaconda3/envs/manim2/Scripts/manim.exe"
+            command,
             capture_output=True,
             text=True,
             cwd=tmpdir
