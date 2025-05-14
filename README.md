@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/abhiemj-manim-mcp-server-badge.png)](https://mseep.ai/app/abhiemj-manim-mcp-server)
+
 # Manim MCP Server
 
 ![Manim MCP Demo](Demo-manim-mcp.gif)
