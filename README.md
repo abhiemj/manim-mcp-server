@@ -116,3 +116,7 @@ This repository is featured in the [Awesome MCP Servers](https://github.com/punk
 ## **Acknowledgments**  
 - Thanks to the [Manim Community](https://www.manim.community/) for their amazing animation library.  
 - Inspired by the open-source MCP ecosystem.
+
+## Find me at
+<a href="https://www.instagram.com/aiburner_official" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="aiburner_official" height="30" width="40" /></a>
+@aiburner_official
